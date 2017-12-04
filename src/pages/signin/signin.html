@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-navbar hideBackButton="true" color="danger">
+        <ion-title>KALOGIN</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <form>
+        <ion-list>
+            <ion-item>
+                <ion-label floating>Email</ion-label>
+                <ion-input [(ngModel)]="user.email" name="email" type="text" autocapitalize="off" required>
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>Password</ion-label>
+                <ion-input [(ngModel)]="user.password" name="password" type="password" required>
+                </ion-input>
+            </ion-item>
+
+
+            <div padding-left padding-right padding-top>
+                <button ion-button block (click)="signIn()" round full>Entrar</button>
+            </div>
+        </ion-list>
+    </form>
+
+
+
+    <form>
+        <ion-list>
+            <div padding-left padding-right padding-top>
+                <button ion-button class="f2" block (click)="loginfacebook()" round full> <ion-icon name="logo-facebook"></ion-icon> Ingresar con Facebook</button>
+            </div>
+
+            <div padding-left padding-right padding-top>
+                <button ion-button color="danger" block (click)="logingoogle()" round full> <ion-icon name="logo-google"></ion-icon> Ingresar con Google</button>
+            </div>
+
+            <div padding-left padding-right padding-top>
+                <button ion-button color="default" block (click)="logintwitter()" round full> <ion-icon name="logo-twitter"></ion-icon> Ingresar con Twitter</button>
+            </div>
+
+            <div padding-left padding-right padding-top>
+                <button ion-button color="dark" block (click)="logingithub()" round full> <ion-icon name="logo-github"></ion-icon> Ingresar con Github</button>
+            </div>
+
+            <div padding-left padding-right padding-top>
+                <button ion-button (click)="signin()" type="submit" color="secondary" round full>
+                    Sign Up</button>
+            </div>
+        </ion-list>
+    </form>
+</ion-content>
